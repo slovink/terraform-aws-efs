@@ -69,8 +69,7 @@ This module has a few dependencies:
 Here is an example of how you can use this module in your inventory structure:
 ```hcl
     module "efs" {
-      source                    = "slovink/efs/aws"
-      version                   = "1.3.0"
+      source                    = "./.."
       name                      = "efs"
       creation_token            = var.token
       region                    = var.region
