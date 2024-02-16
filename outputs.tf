@@ -4,7 +4,6 @@ output "arn" {
   value       = join("", aws_efs_file_system.default[*].arn)
   description = "EFS ARN"
 }
-
 output "id" {
   value       = join("", aws_efs_file_system.default[*].id)
   description = "EFS ID"

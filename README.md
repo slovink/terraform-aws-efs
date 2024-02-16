@@ -130,7 +130,7 @@ In this module testing is performed with [terratest](https://github.com/gruntwor
 
 You need to run the following command in the testing folder:
 ```hcl
-  go test -run Test
+go test run Test
 ```
 
 
