@@ -88,28 +88,28 @@ Here is an example of how you can use this module in your inventory structure:
 
 ## Inputs
 
-| Name | Description                                                                                                                                                              | Type | Default                                           | Required |
-|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|---------------------------------------------------|:--------:|
-| access\_point\_enabled | n/a                                                                                                                                                                      | `bool` | `true`                                            | no |
-| allow\_cidr | Provide allowed cidr to efs                                                                                                                                              | `list(any)` | `[]`                                              | no |
-| availability\_zones | Availability Zone IDs                                                                                                                                                    | `list(string)` | n/a                                               | yes |
-| creation\_token | A unique name (a maximum of 64 characters are allowed) used as reference when creating the EFS                                                                           | `string` | n/a                                               | yes |
-| efs\_backup\_policy\_enabled | If `true`, it will turn on automatic backups.                                                                                                                            | `bool` | `true`                                            | no |
-| efs\_enabled | Set to false to prevent the module from creating any resources                                                                                                           | `bool` | `true`                                            | no |
-| encrypted | If true, the file system will be encrypted                                                                                                                               | `bool` | `true`                                            | no |
-| environment | Environment (e.g. `prod`, `dev`, `staging`).                                                                                                                             | `string` | `"test"`                                          | no |
-| kms\_key\_id | The ARN for the KMS encryption key. When specifying kms\_key\_id, encrypted needs to be set to true.                                                                     | `string` | `""`                                              | no |
-| label\_order | label order, e.g. `name`,`application`                                                                                                                                   | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| managedby | ManagedBy, eg 'slovink'.                                                                                                                                                 | `string` | `"hello@slovink.com"`                             | no |
-| mount\_target\_description | n/a                                                                                                                                                                      | `string` | `""`                                              | no |
-| mount\_target\_ip\_address | The address (within the address range of the specified subnet) at which the file system may be mounted via the mount target                                              | `string` | `null`                                            | no |
-| name | Solution name, e.g. `app`                                                                                                                                                | `string` | `""`                                              | no |
-| performance\_mode | The file system performance mode. Can be either `generalPurpose` or `maxIO`                                                                                              | `string` | `"generalPurpose"`                                | no |
-| provisioned\_throughput\_in\_mibps | The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to provisioned                             | `string` | `0`                                               | no |
-| security\_groups | Security group IDs to allow access to the EFS                                                                                                                            | `list(string)` | n/a                                               | yes |
-| subnets | Subnet IDs                                                                                                                                                               | `list(string)` | n/a                                               | yes |
-| throughput\_mode | Throughput mode for the file system. Defaults to bursting. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps` | `string` | `"bursting"`                                      | no |
-| vpc\_id | VPC ID                                                                                                                                                                   | `string` | n/a                                               | yes |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| access\_point\_enabled | n/a | `bool` | `true` | no |
+| allow\_cidr | Provide allowed cidr to efs | `list(any)` | `[]` | no |
+| availability\_zones | Availability Zone IDs | `list(string)` | n/a | yes |
+| creation\_token | A unique name (a maximum of 64 characters are allowed) used as reference when creating the EFS | `string` | n/a | yes |
+| efs\_backup\_policy\_enabled | If `true`, it will turn on automatic backups. | `bool` | `true` | no |
+| efs\_enabled | Set to false to prevent the module from creating any resources | `bool` | `true` | no |
+| encrypted | If true, the file system will be encrypted | `bool` | `true` | no |
+| environment | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `"test"` | no |
+| kms\_key\_id | The ARN for the KMS encryption key. When specifying kms\_key\_id, encrypted needs to be set to true. | `string` | `""` | no |
+| label\_order | label order, e.g. `name`,`application` | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
+| managedby | ManagedBy, eg 'slovink'. | `string` | `"hello@slovink.com"` | no |
+| mount\_target\_description | n/a | `string` | `""` | no |
+| mount\_target\_ip\_address | The address (within the address range of the specified subnet) at which the file system may be mounted via the mount target | `string` | `null` | no |
+| name | Solution name, e.g. `app` | `string` | `""` | no |
+| performance\_mode | The file system performance mode. Can be either `generalPurpose` or `maxIO` | `string` | `"generalPurpose"` | no |
+| provisioned\_throughput\_in\_mibps | The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to provisioned | `string` | `0` | no |
+| security\_groups | Security group IDs to allow access to the EFS | `list(string)` | n/a | yes |
+| subnets | Subnet IDs | `list(string)` | n/a | yes |
+| throughput\_mode | Throughput mode for the file system. Defaults to bursting. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps` | `string` | `"bursting"` | no |
+| vpc\_id | VPC ID | `string` | n/a | yes |
 
 ## Outputs
 
@@ -130,7 +130,7 @@ In this module testing is performed with [terratest](https://github.com/gruntwor
 
 You need to run the following command in the testing folder:
 ```hcl
-go test run Test
+  go test -run Test
 ```
 
 
