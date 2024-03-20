@@ -65,16 +65,10 @@ If you come accross a bug or have any feedback, please log it in our [issue trac
 If you have found it worth your time, go ahead and give us a ★ on [our GitHub](https://github.com/slovink/terraform-aws-efs)!
 
 
-## About us
-At https://slovink.com/ we offer expert guidance, implementation support and services to help organisations accelerate their journey to the slovi. Our
-services include docker and container orchestration, slov migration and adoption, infrastructure automation, application modernisation and
-remediation, and performance engineering.
-
-
 
 ## About us
 
-At [slovink][website], we offer expert guidance, implementation support and services to help organisations accelerate their journey to the cloud. Our services include docker and container orchestration, cloud migration and adoption, infrastructure automation, application modernisation and remediation, and performance engineering.
+At [slovink][ https://slovink.com/], we offer expert guidance, implementation support and services to help organisations accelerate their journey to the cloud. Our services include docker and container orchestration, cloud migration and adoption, infrastructure automation, application modernisation and remediation, and performance engineering.
 
 <p align="center">We are <b> The Cloud Experts!</b></p>
 <hr />
